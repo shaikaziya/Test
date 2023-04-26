@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="tbuser"/>
+    <input type="button" id="btn1" value="Click Here"/>
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <script>
+        var txt1 = document.getElementById("tbuser")
+        var btn1 = document.getElementById("btn1")
+        var out1 = document.getElementById("output1")
+        var out2=document.getElementById("output2")
+        function fun1(){
+            if(txt1.value<0){
+                document.getElementById('output2').innerHTML = "Enter a Positive value";
+            }
+            else{
+                out1.innerHTML=txt1.value
+            }      
+        }
+        btn1.addEventListener("click",fun1)
+    </script>
+</body>
+</html>
+

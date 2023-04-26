@@ -1,0 +1,41 @@
+<div class="container">
+    <h1>Display Events</h1>
+    <script>
+      function showEvens() {
+        var start = document.getElementById("start").valueAsNumber;
+        var end = document.getElementById("end").valueAsNumber;
+        // var step = document.getElementById("step").valueAsNumber;
+        var evenNums = "<br>Even Numbers:<br>";
+        var evenNums1 = [];
+  
+        for (i = start; i <= end; i++) {
+          if (i % 2 == 1) {
+            evenNums1 =evenNums1+i
+            if(evenNums1.length==4){
+                break
+            }
+          }
+        }
+        document.getElementById("result").innerHTML = evenNums1;
+      }
+    </script>
+    <table>
+      <tr>
+        <td>Starting Number:</td>
+        <td><input type="number" id="start" /></td>
+      </tr>
+      <tr>
+        <td>Ending Number:</td>
+        <td> <input type="number" id="end" /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="button" onclick="showEvens()" value="View odd Numbers" /></td>
+      </tr>
+      <tr>
+        <td>
+          <div id="result"></div>
+        </td>
+      </tr>
+    </table>
+  </div>
